@@ -14,29 +14,53 @@
 			integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAsNP"
 			crossorigin="anonymous"
 		/>
-
 		<style>
-			.row2 {
-				display: flex;
+			body {
+				background: #59c173; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#5d26c1,
+					#a17fe0,
+					#59c173
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#5d26c1,
+					#a17fe0,
+					#59c173
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			}
 
-			.column2 {
-				flex: 25%;
-				padding: 30px;
+			.align{
+				text-align: center;
+			}
+
+			.card2{
+				background: #82e07f9c;
+			}
+			.result{
+				color: azure;
+			}
+
+			.loading{
+				/* text-align: center; */
+				width: 100%;
 			}
 		</style>
-		<title>PEACHPIC</title>
+
+
+		<title>PEACHGif</title>
 	</head>
-	<body>
+	<body class="bg-gradient-dark">
 		<nav class="navbar navbar-dark bg-primary mb-3">
 			<div class="container">
-				<a href="#" class="navbar-brand">Picture Finder</a>
+				<a href="#" class="navbar-brand">Gifs Finder</a>
 			</div>
 		</nav>
 
 		<div class="container searchContainer">
 			<div class="search card card-body">
-				<h1>Search Pictures</h1>
+				<h1>Search Gifs</h1>
 				<div class="alert alert-dismissible alert-danger">
 					<button type="button" class="close" data-dismiss="alert">
 						&times;
@@ -44,54 +68,43 @@
 					<strong>Oh snap! Input your Search Text </strong>
 					and try submitting again.
 				</div>
-				<p class="lead">Enter picture name</p>
+				<!-- <p class="lead">Enter picture name</p> -->
 				<form>
-					<label for="search">search</label>
-					<input type="text" id="search" class=" form-control" />
-					<button id="btnSearch" class="btn btn-success">Go</button>
+					<!-- <label for="search"></label> -->
+					<input
+						type="text"
+						id="search"
+						class=" form-control"
+						placeholder="Enter Gifs category"
+					/>
+					<button id="btnSearch" class="btn btn-success mt-3" type="button">
+						Go
+					</button>
 				</form>
 			</div>
 			<div class="result"></div>
 			<br />
-			<div id="loading">
-				<img src="loading.gif" alt="" />
-            </div>
-            <div id="gifs">
-                <div class="row">
-                    <div class="col-md-3 profile">
-                        
-                    </div>
-                    <div class="col-md-3 profile">
-                       
-                    </div>
-                    <div class="col-md-3 profile">
-                        
-                    </div>
-                    <div class="col-md-3 profile">
-                        
-                    </div>
-                    <div class="col-md-3 profile">
-                       
-                    </div>
+			
+			<div id="loading" class="mx-auto" style="width: 400px;">
+				<img src="loading.gif" alt="loading"  class="loading" />
+			</div>
+			<div id="gifs">
+				<div class="row">
+					<div class="col-md-3 profile "></div>
+					<div class="col-md-3 profile"></div>
+					<div class="col-md-3 profile"></div>
+					<div class="col-md-3 profile"></div>
+					<div class="col-md-3 profile"></div>
 
-                     <div class="col-md-3 profile">
-                       
-                    </div>
-                    <div class="col-md-3 profile">
-                       
-                    </div>
-                    <div class="col-md-3 profile">
-                       
-                    </div>
-                    
-                
-
-                </div>
-            </div>
-        </div>
+					<div class="col-md-3 profile"></div>
+					<div class="col-md-3 profile"></div>
+					<div class="col-md-3 profile"></div>
+				</div>
+			</div>
+		</div>
 
 		<footer class="mt-5 p-3 text-center bg-light">
-			PEACHPIC &copy;
+			2019 &copy; ASODev
 		</footer>
 
 		<script
